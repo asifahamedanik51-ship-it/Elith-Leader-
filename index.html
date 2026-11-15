@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elith Leader Brand - প্রিমিয়াম লং লেদার ওয়ালেট</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1170888551952189');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1170888551952189&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Hind Siliguri,Arial,sans-serif}
 body{background:#0b0b0b}
@@ -86,6 +103,7 @@ function sendOrder(){
   var address = document.getElementById('cAddress').value.trim();
   var qty = document.getElementById('cQty').value;
   if(!name || !phone || !address){ alert('ভাই, নাম, মোবাইল আর ঠিকানা সব পূরণ করুন'); return; }
+  if(typeof fbq !== 'undefined'){ fbq('track', 'Lead'); }
   var msg = "🔥 *নতুন অর্ডার - Elith Leader Brand* 🔥%0A%0A" + "👤 *নাম:* " + name + "%0A" + "📞 *মোবাইল:* " + phone + "%0A" + "📍 *ঠিকানা:* " + address + "%0A" + "🛍️ *প্রোডাক্ট:* প্রিমিয়াম লং লেদার ওয়ালেট%0A" + "📦 *পরিমাণ:* " + qty + "%0A%0A" + "দয়া করে অর্ডারটি কনফার্ম করুন।";
   window.open("https://wa.me/8801703610508?text=" + msg, "_blank");
 }
